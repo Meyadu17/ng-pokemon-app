@@ -5,6 +5,7 @@ import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
 import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
 import { BorderCardDirective } from './border-card.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
+import { PokemonService } from './pokemon.service';
 
 //Attention à l'ordre des routes !
 const pokemonRoutes: Routes = [
@@ -22,6 +23,9 @@ const pokemonRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(pokemonRoutes)
+  ],
+  providers: [
+    PokemonService
   ]
 })
 export class PokemonModule { }
