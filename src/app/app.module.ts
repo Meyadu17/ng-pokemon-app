@@ -5,12 +5,9 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BorderCardDirective } from './border-card.directive';
-import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
-import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
-import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
+import { AppComponent } from './app.component';;
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 registerLocaleData(localeFr);
 /*
@@ -24,14 +21,12 @@ registerLocaleData(localeFr);
 @NgModule({
   declarations: [
     AppComponent,
-    BorderCardDirective,
-    PokemonTypeColorPipe,
-    ListPokemonComponent,
-    DetailPokemonComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    /* attention à l'ordre des imports par rapport à la lecture des routes !! */
+    PokemonModule,
     AppRoutingModule
   ],
   providers: [
