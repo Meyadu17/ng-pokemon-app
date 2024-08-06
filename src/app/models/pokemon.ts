@@ -1,4 +1,3 @@
-/* Chapitre 2 : Les Composants */
 export class Pokemon {
     id: number;
     hp: number;
@@ -7,4 +6,4 @@ export class Pokemon {
     picture: string;
     types: Array<string>;
     created: Date;
-  }
+}

@@ -1,0 +1,37 @@
+
+    <div class="row">
+        <div class="col s12">
+          <div class="card background-color-beige1">
+            <div class="card-content text-color-noir">
+              <span class="card-title">Présentation</span>
+              <p>
+                J'ai souhaité vous présenter ici un tour de France d'une partie de ma collection de cartes postales en noir et blanc.
+                Sur certaines, les dates entre parenthèse correspondent à l'année où la carte postale a été écrite.
+                Quelques sections sont vides en attente d'une prochaine mise à jour.
+                N'hésitez pas à me laisser un message dans la partie contact s'il y avait une erreur de saisie, un bug ou mauvais lien... Je suis ouverte également à toute suggestion.
+                Je vous souhaite une agréable visite
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="col s12">
+      <img class="materialboxed" width="650" src="assets/mock-pictures/exemple-h-1.jpg">
+    </div>
+
+    <div class="row">
+        <div *ngFor='let region of regionList' class="col s6 m3">
+            <div (click)="goToPokemon(region.id)" class="card" pkmnBorderCard>
+            <div class="card-image">
+                <img class="image-size" [src]="region.image">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content center">
+                <p>{{ region.nom }}</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+

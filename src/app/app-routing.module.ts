@@ -4,7 +4,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 //Attention à l'ordre des routes !
 const routes: Routes = [
-  { path:'', redirectTo: 'pokemons', pathMatch: 'full'},
+  { path:'', redirectTo: 'accueil', pathMatch: 'full'},
   //** pour dire TOUTE les URL, page à toutjours laisser en dernier :
   { path:'**', component: PageNotFoundComponent }
 ];

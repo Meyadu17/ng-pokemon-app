@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pokemon } from '../pokemon';
-import { PokemonService } from '../pokemon.service';
+import { Pokemon } from '../../models/pokemon';
+import { CardCollectionService } from '../../services/card-collection.service';
 
 @Component({
   selector: 'app-detail-pokemon',
@@ -15,7 +15,7 @@ export class DetailPokemonComponent implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
-    private pokemonService: PokemonService
+    private pokemonService: CardCollectionService
   ) { }
   
   ngOnInit(): void {
@@ -28,6 +28,10 @@ export class DetailPokemonComponent implements OnInit {
 
   goToPokemonList(){
     this.router.navigate(['/pokemons']);
+  }
+
+  goToEditPokemon(id:number){
+    this.router.navigate(['/edit/pokemons', id]);
   }
 
 }

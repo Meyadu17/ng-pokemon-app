@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Region } from './models/region';
+import { CardCollectionService } from './services/card-collection.service';
 
 /*
  * @Component est un décorateur
@@ -14,4 +16,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'app.component.html'
 })
 //export permet d'expoter le composant, le rentant disponible ailleur dans l'application (équivalent au public dans les classes Java)
-export class AppComponent {}
+export class AppComponent {
+  test:string ="";
+  regionList: Region[];
+  selectedTab: number;
+
+  constructor(private cardCollectionService: CardCollectionService) {}
+
+  ngOnInit(): void {
+    this.regionList = this.cardCollectionService.getAllRegions();
+  }
+
+  goToListCard(test:string){
+    console.log("test");
+  }
+
+  selectTab(tabId: number) {
+    this.selectedTab = tabId;
+  }
+
+}

@@ -7,7 +7,8 @@ import localeFr from '@angular/common/locales/fr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';;
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { PokemonModule } from './pokemon/pokemon.module';
+import { PokemonModule } from './collection-card/pokemon.module';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localeFr);
 /*
@@ -25,6 +26,7 @@ registerLocaleData(localeFr);
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     /* attention à l'ordre des imports par rapport à la lecture des routes !! */
     PokemonModule,
     AppRoutingModule

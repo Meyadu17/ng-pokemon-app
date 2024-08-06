@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Pokemon } from './pokemon';
-import { POKEMONS } from './mock-pokemon-list';
+import { Region } from '../models/region';
+import { Pokemon } from '../models/pokemon';
+import { POKEMONS, REGION } from '../mock';
 
 @Injectable()
-export class PokemonService {
+export class CardCollectionService {
 
   constructor() { }
 
+  getAllRegions(): Region[]{
+    return REGION;
+  }
+
+  //---------------------------------------------------//
   getPokemonList():Pokemon[] {
     return POKEMONS;
   }
@@ -33,4 +39,6 @@ export class PokemonService {
       'Psy'
     ];
   }
+  //---------------------------------------------------//
+
 }

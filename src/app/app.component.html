@@ -1,7 +1,72 @@
-<nav>
-    <div class="nav-wrapper teal">
-        <a href="#" class="brand-logo center">Pokédex</a>
-    </div>
-</nav>
+<div class="row">
+    <div class="col s2">
+      <div class="row">
+        
+        <div class="card horizontal color-beige2-1 logo-border">
+            <img src="assets/images/favicon.jpg" class="logo">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>
+                <b>C</b>artes<br>
+                <b>P</b>ostales<br>
+                <b>A</b>nciennes
+              </p>
+            </div>
+          </div>
+        </div> 
 
-<router-outlet></router-outlet>
+      </div> 
+      <div class="row">
+        <div class="card color-beige2-1">
+
+          <div class="card-action tab-container color-beige2-1">
+            <a class="text-black-color tab waves-effect waves-light" [ngClass]="{'active': selectedTab === 500, 
+                      'mon-onglet-actif': selectedTab === 500}" (click)="selectTab(500)">
+              Administration
+              <i class="tiny material-icons">arrow_drop_down</i>
+            </a>
+            <div *ngIf="selectedTab === 500">
+              <table class="highlight text-color-noir">
+                <tbody>
+                  <tr class="color-beige1-2" (click)="goToListCard(test)">
+                    <td>Nouvelle carte</td>
+                  </tr>
+                  <tr class="color-beige1-2" (click)="goToListCard(test)">
+                    <td>Les région</td>
+                  </tr>
+                  <tr class="color-beige1-2" (click)="goToListCard(test)">
+                    <td>Les départements</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div *ngFor='let region of regionList' class="card-action tab-container color-beige2-1">
+            <a class="text-black-color tab waves-effect waves-light" [ngClass]="{'active': selectedTab === region.id, 
+                      'mon-onglet-actif': selectedTab === region.id}" (click)="selectTab(region.id)">
+              {{ region.nom }}
+              <i class="tiny material-icons">arrow_drop_down</i>
+            </a>
+            <div *ngIf="selectedTab === region.id">
+              <table class="highlight color-noir">
+                <tbody>
+                  <tr class="color-beige1-2" *ngFor='let departement of region.departements' (click)="goToListCard(test)">
+                    <td>{{ departement.nom }} - {{ departement.valeur }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div> 
+      </div> 
+    </div>
+
+    <div class="col s9">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col s1"></div>
+    
+  </div>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-pokemon-app": {
+    "collection-carte-postale": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -43,7 +43,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-pokemon-app",
+            "outputPath": "dist/collection-carte-postale",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -98,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ng-pokemon-app:build:production"
+              "buildTarget": "collection-carte-postale:build:production"
             },
             "development": {
-              "buildTarget": "ng-pokemon-app:build:development"
+              "buildTarget": "collection-carte-postale:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,7 +109,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ng-pokemon-app:build"
+            "buildTarget": "collection-carte-postale:build"
           }
         }
       }
