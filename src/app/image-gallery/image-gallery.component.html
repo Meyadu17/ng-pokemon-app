@@ -1,0 +1,13 @@
+<div *ngFor="let image of images">
+    <img [src]="image" appImageModal (click)="onClick(image)">
+  </div>
+  
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <img #modalImage src="" alt="Image agrandie" />
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fermer</a>
+    </div>
+  </div>
+  Utilisez ce code avec préc

@@ -9,7 +9,8 @@ import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 import { CardCollectionService } from '../services/card-collection.service';
 import { AccueilComponent } from './accueil/accueil.component';
-import { ImageModalDirective } from './card-dialog/image-modal.directive';
+import { ImageGalleryComponent } from '../image-gallery/image-gallery.component';
+import { ImageModalComponent } from '../image-modal/image-modal.component';
 
 //Attention à l'ordre des routes !
 //on pars du plus spécifique au plus global !!!
@@ -27,7 +28,8 @@ const pokemonRoutes: Routes = [
     PokemonTypeColorPipe,
     PokemonFormComponent,
     EditPokemonComponent,
-    ImageModalDirective
+    ImageGalleryComponent,
+    ImageModalComponent
   ],
   imports: [
     CommonModule,

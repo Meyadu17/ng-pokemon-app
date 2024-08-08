@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';;
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PokemonModule } from './collection-card/pokemon.module';
 import { FormsModule } from '@angular/forms';
-import { CardDialogComponent } from './collection-card/card-dialog/card-dialog.component';
+import { CardCollectionService } from './services/card-collection.service';
 
 registerLocaleData(localeFr);
 /*
@@ -24,7 +24,6 @@ registerLocaleData(localeFr);
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    CardDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +33,7 @@ registerLocaleData(localeFr);
     AppRoutingModule
   ],
   providers: [
+    CardCollectionService,
     provideClientHydration(),
     { provide: LOCALE_ID, useValue: 'fr' }
   ],

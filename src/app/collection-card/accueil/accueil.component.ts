@@ -9,6 +9,7 @@ import { CardCollectionService } from '../../services/card-collection.service';
   templateUrl: './accueil.component.html',
 })
 export class AccueilComponent implements OnInit {
+  
   pokemonList: Pokemon[];
   regionList: Region[];
 
