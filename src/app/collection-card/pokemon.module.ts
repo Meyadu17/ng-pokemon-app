@@ -9,7 +9,7 @@ import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 import { CardCollectionService } from '../services/card-collection.service';
 import { AccueilComponent } from './accueil/accueil.component';
-import { ImageModalDirective } from './image-modal.directive';
+import { ImageModalDirective } from './card-dialog/image-modal.directive';
 
 //Attention à l'ordre des routes !
 //on pars du plus spécifique au plus global !!!

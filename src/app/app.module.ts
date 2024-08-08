@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';;
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PokemonModule } from './collection-card/pokemon.module';
 import { FormsModule } from '@angular/forms';
+import { CardDialogComponent } from './collection-card/card-dialog/card-dialog.component';
 
 registerLocaleData(localeFr);
 /*
@@ -22,7 +23,8 @@ registerLocaleData(localeFr);
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CardDialogComponent
   ],
   imports: [
     BrowserModule,
