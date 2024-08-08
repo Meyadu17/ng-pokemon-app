@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';;
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PokemonModule } from './collection-card/pokemon.module';
 import { FormsModule } from '@angular/forms';
-import { CardCollectionService } from './services/card-collection.service';
+import { CardCollectionService } from './collection-card/card-collection.service';
 
 registerLocaleData(localeFr);
 /*
@@ -33,7 +33,6 @@ registerLocaleData(localeFr);
     AppRoutingModule
   ],
   providers: [
-    CardCollectionService,
     provideClientHydration(),
     { provide: LOCALE_ID, useValue: 'fr' }
   ],

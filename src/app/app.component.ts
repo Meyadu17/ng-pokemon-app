@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Region } from './models/region';
-import { CardCollectionService } from './services/card-collection.service';
+import { CardCollectionService } from './collection-card/card-collection.service';
 
 /*
  * @Component est un décorateur

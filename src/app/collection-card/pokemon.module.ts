@@ -7,7 +7,7 @@ import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { FormsModule } from '@angular/forms';
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
-import { CardCollectionService } from '../services/card-collection.service';
+import { CardCollectionService } from './card-collection.service';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ImageGalleryComponent } from '../image-gallery/image-gallery.component';
 import { ImageModalComponent } from '../image-modal/image-modal.component';

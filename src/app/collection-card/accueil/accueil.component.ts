@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../../models/pokemon';
 import { Router } from '@angular/router';
 import { Region } from '../../models/region';
-import { CardCollectionService } from '../../services/card-collection.service';
+import { CardCollectionService } from '../card-collection.service';
 
 @Component({
   selector: 'app-accueil',
